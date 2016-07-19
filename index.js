@@ -1,13 +1,20 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 var stack = require('./lib/stack');
 var bodyParser = require('body-parser');
+app.use(cors());
 app.use(bodyParser());
 app.post('/stack', function (req, res) {
 	console.log(req.body);
 	console.log('in / route');
-	stack.processStack(function(err, response){
-		res.send(response);
+	stack.processStack(req.body,function(err, response){
+		if (err){
+			res.send(err)
+		} else {
+			res.send(response);
+		}
+		
 	});	
 	
   	
