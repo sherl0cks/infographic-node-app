@@ -10,7 +10,7 @@ app.post('/stack', function (req, res) {
 	console.log('in / route');
 	stack.processStack(req.body,function(err, response){
 		if (err){
-			res.send(err)
+			res.status(500).send(err);
 		} else {
 			res.send(response);
 		}
