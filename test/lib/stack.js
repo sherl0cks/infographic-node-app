@@ -1,5 +1,6 @@
 var proxyquire = require('proxyquire');
 var mockRequest = function(options, cb){
+
 	var successResponse = {
 		"statusCode":202,
 		"body":{
@@ -37,7 +38,11 @@ var mockRequest = function(options, cb){
 			}
 		}
 	};
-	cb(null, successResponse, successResponse.body);
+	if (options.url == 'https://admin:admin@tower-1.innovation.labs.redhat.com/api/v1/job_templates/8/launch/'){
+		cb(null, successResponse, successResponse.body);
+	} else {
+		cb('incorrect url', null);
+	}
 }
    
 describe('processStack calls', function () {
