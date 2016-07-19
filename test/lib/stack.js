@@ -38,8 +38,8 @@ var mockRequest = function(options, cb){
 			}
 		}
 	};
-//  console.log(options.json.extra_vars.stack_configuration);
-  if(options.json.extra_vars.stack_configuration.params.project_name !== 'testproject'){
+  console.log(options.json.extra_vars.stack_configuration);
+  if(options.json.extra_vars.stack_configuration.project_name !== 'testproject'){
     cb('Incorrect project_name');
   }else if (options.url == 'https://admin:admin@tower-1.innovation.labs.redhat.com/api/v1/job_templates/8/launch/'){
 		cb(null, successResponse, successResponse.body);
