@@ -22,5 +22,5 @@ app.post('/stack', function (req, res) {
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080
 app.listen(port, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Example app listening on port '+port+'!');
 });
