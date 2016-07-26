@@ -14,10 +14,13 @@ app.post('/stack', function (req, res) {
 		} else {
 			res.send(response);
 		}
-
 	});
+});
 
-
+app.get('/', function (req, res) {
+	console.log(req.body);
+	console.log('in / route');
+	res.send('Hello, World! This is version 0.2.0')
 });
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080
