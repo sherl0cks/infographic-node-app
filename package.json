@@ -1,11 +1,12 @@
 {
-  "name": "node-app",
-  "version": "0.0.1",
+  "name": "infographic-node-app",
+  "version": "0.0.2",
   "description": "Node app to process calls from infographic",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha -w",
-    "start": "node index.js"
+    "start": "node index.js",
+    "validate": "node node_modules/esprima/bin/esvalidate.js index.js lib/*"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +18,12 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "esprima": "^2.7.2",
     "mocha": "^2.5.1",
-    "should": ">= 0.0.1",
-    "proxyquire": "^1.7.9"
+    "proxyquire": "^1.7.9",
+    "should": ">= 0.0.1"
+  },
+  "publishConfig": {
+    "registry": "http://cicd.env1.fsi.innovation.redhat.com/nexus/content/repositories/npm-internal/"
   }
 }
