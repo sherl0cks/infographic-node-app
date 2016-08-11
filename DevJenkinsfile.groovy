@@ -5,4 +5,6 @@ developmentPipeline{
     ocHost = 'holmes-playground.demo.innovation.redhat.com'
     projectName = 'holmes-playground'
     appName = 'infographic-node-app'
+    qualityScanCommand = 'run sonar qube'
+    dockerRegistry = 'registry.env3-1.innovation.labs.redhat.com'
 }
