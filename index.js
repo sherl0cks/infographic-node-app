@@ -20,7 +20,7 @@ app.post('/stack', function (req, res) {
 app.get('/', function (req, res) {
 	console.log(req.body);
 	console.log('in / route');
-	res.send('Hello, World! This is version 0.5.0')
+	res.send('Hello, World! This is version 0.6.0')
 });
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080
