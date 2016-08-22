@@ -2,8 +2,8 @@ developmentPipeline{
     buildCommands = ['npm install -only=dev'] // Add this when we figure out , 'npm run-script validate']
     unitTestCommand = 'npm test'
     buildTool = 'node-0.10'
-    ocHost = 'holmes-playground.demo.innovation.redhat.com'
-    projectName = 'holmes-playground'
+    ocHost = 'env3-1-master.innovation.labs.redhat.com'
+    projectName = 'infographic'
     appName = 'infographic-node-app'
     qualityScanCommand = 'run sonar qube'
     dockerRegistry = 'registry.env3-1.innovation.labs.redhat.com'

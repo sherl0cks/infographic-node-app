@@ -3,12 +3,11 @@ releasePipeline{
     buildTool = 'node-0.10'
     ocHost = 'env3-1-master.innovation.labs.redhat.com'
 	dockerRegistry = 'registry.env3-1.innovation.labs.redhat.com'
-    projectName = 'holmes-dev'
-    appName = 'infographic-node-app' // this will need to be made env agnostic
+    appName = 'infographic-node-app'
     
 	envs = [
-		[name: 'Dev', projectName: 'holmes-dev'],
-    	[name: 'Stage', projectName: 'holmes-stage' ],
-    	[name: 'Production', projectName: 'holmes-prod' ]
+		[name: 'Dev', projectName: 'infographic-dev'],
+    	[name: 'Stage', projectName: 'infographic-stage' ],
+    	[name: 'Production', projectName: 'infographic-prod' ]
    ]
 }
